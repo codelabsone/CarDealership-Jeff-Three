@@ -1,25 +1,31 @@
-=begin
-dealership = "Jeff Car Dealership 3"
-print "Welcome to #{dealership}, we have "
-
-models = ["Cars","SUVs", "Trucks"]
-models.each do |model|
-print "#{model}" + ' '
-end
-=end
-
-vehicles_car1 = "Car's"
-vehicles_truck2 = "Truck's and Van's"
-vehicles_suv3 = "SUV's"
-
 dealership_name = "Jeff's Car Dealership 3"
 
-puts "Welcome to #{dealership_name}" + "\nView our Inventory of #{vehicles_car1}, #{vehicles_suv3}, #{vehicles_truck2}. Hope you find your perfect stalkers van.\n"
 
+models = ["Cars,", "Trucks,", "Vans", "and Suvs"]
+trucks = [["ranger", "2019", "23,000"], ["transit connect", "2019", "26,845"], ["f150", "2019", "28,155"], ["super duty", "2019", "33,150"], ["transit", "2019", "35,840"]]
+suvs = [["edge", "2019", "29,995"], ["escape", "2019", "24,2015"], ["explorer", "2019", "32,365"], ["flex", "2019", "30,575"], ["expedition", "2019", "52,130"]]
+cars = [["fiesta", "2019", "14,260"], ["fusion", "2019", "22,840"], ["mustang", "2019" , "26,395"], ["taurus", "2019", "27,800"]]
+
+welcomemessage = "Welcome to #{dealership_name} \nView our Inventory of"
+models.each do |model|
+  welcomemessage << " #{model}"
+end
+puts welcomemessage + "."
+
+=begin
 puts "What is your stalker alliace? "
 name = gets.chomp
 puts "Hello #{name.capitalize}."
+=end
 
+name = gets.chomp
+trucks.each do |truck|
+  if name == "ranger"
+    puts truck[0]
+  end
+end
+
+=begin
 class Trucksandvan
   trucksandvan1 = Trucksandvan.new
   def initialize(year, model, price)
@@ -55,26 +61,6 @@ class Suv
     "We have a Ford #{@year} #{@model} for $#{@price}, or enact prima nocta."
   end
 end
-
-#Trucksandvan
-trucksandvan1 = Trucksandvan.new(2019, "Ranger", "23,300" )
-trucksandvan2 = Trucksandvan.new(2019, "Transit Connect", "26,845" )
-trucksandvan3 = Trucksandvan.new(2019, "F-150", "28,155" )
-trucksandvan4 = Trucksandvan.new(2019, "Super Duty", "33,150" )
-trucksandvan5 = Trucksandvan.new(2019, "Transit", "35,840" )
-
-#SUV
-suv1 = Suv.new(2019, "Edge", "29,995" )
-suv2 = Suv.new(2019, "Escape", "24,2015" )
-suv3 = Suv.new(2019, "Explorer", "32,365" )
-suv4 = Suv.new(2019, "Flex", "30,575" )
-suv5 = Suv.new(2019, "Expedition", "52,130" )
-
-#Cars
-cars1 = Cars.new(2019, "Fiesta", "14,260" )
-cars2 = Cars.new(2019, "Fusion", "22,840" )
-cars3 = Cars.new(2019, "Mustang", "26,395" )
-cars4 = Cars.new(2019, "Taurus", "27,800" )
 
 # Ask's the customer what truck they are looking for and loops until it gets a valid user input from the selected response.
 prompt = "> "
@@ -113,3 +99,4 @@ while user_input = gets.chomp
 end
 
 puts "Thank you for shopping at #{dealership_name}, all hail the Lich King."
+=end
