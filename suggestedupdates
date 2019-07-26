@@ -1,0 +1,9 @@
+Suggested updates:
+
+    1. Make a single class of vehicles and add a "type" attribute
+    2. Pull the vehicle class to its own file
+    3. Consider making a Randomizer class
+    4. create some new vehicles and try putting them in an array
+    5. ???
+    6. ???
+    7. Profit!
