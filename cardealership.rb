@@ -16,7 +16,24 @@ puts "Hello #{name.capitalize}."
 
 puts "What inventory of vehicles would you like to view from?\n\t1)Cars \n\t2)Trucks \n\t3)Suvs"
 
-puts $allcars.sample
+car = gets.chomp
+while user_input = gets.chomp
+    case user_input
+    when "car"
+      $allcars.each do |car|
+  if $allcars.include? "2018"
+    result = car
+    break
+  when "truck"
+    $alltrucks.each do |truck|
+      if $allcars.include? "2019"
+        result = truck
+        break
+      else
+        puts "We have no inventory please search again!"
+      end
+end
+
 
 =begin
 
