@@ -1,13 +1,13 @@
 class Vehicles
-    vehicles = Vehicles.new
-    def initialize(year, model, price, type)
-      @year = year
-      @model = model
-      @price = price
-      @type = type
-    end
+  def initialize(year, make, model, price, color)
+    @year = year
+    @make = make
+    @model = model
+    @price = price
+    @color = color
+  end
 
-    def to_s
-      "We have a Ford #{@year} #{@model} for $#{@price}."
-    end
+  def to_s
+    "We have a #{@year} #{@make.upcase} #{@model} in the color #{@color} for #{@price}"
+  end
 end
