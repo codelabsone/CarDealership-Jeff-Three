@@ -1,22 +1,15 @@
 require_relative 'vehicle'
-require_relative 'randomizer'
+require_relative 'arrays'
+require_relative 'welcomemessage'
 
-dealership_name = "Jeff's Car Dealership 3"
-models = ["Cars", "Trucks", "and Suvs"]
-welcomemessage = "Welcome to #{dealership_name} \nView our Inventory of"
+puts welcome
 
-models.each do |model|
-  welcomemessage << " #{model}"
-end
-puts welcomemessage + "."
+search = gets.chomp
+search.to_s
+print $allcars.select {|s| s.include? 'fusion'}.join(' '), "\n"
 
-puts "What is your stalker alliance?"
-name = gets.chomp
-puts "Hello #{name.capitalize}."
-
-puts "What inventory of vehicles would you like to view from?\n\t1)Cars \n\t2)Trucks \n\t3)Suvs"
-
-car = gets.chomp
+=begin
+search = gets.chomp
 while user_input = gets.chomp
     case user_input
     when "car"
@@ -24,7 +17,7 @@ while user_input = gets.chomp
   if $allcars.include? "2018"
     result = car
     break
-  when "truck"
+    when "truck"
     $alltrucks.each do |truck|
       if $allcars.include? "2019"
         result = truck
@@ -33,7 +26,7 @@ while user_input = gets.chomp
         puts "We have no inventory please search again!"
       end
 end
-
+=end
 
 =begin
 
