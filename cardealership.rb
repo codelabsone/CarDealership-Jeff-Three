@@ -1,5 +1,5 @@
 require_relative 'vehicle'
-require_relative 'arrays'
+require_relative 'inventory'
 require_relative 'welcomemessage'
 
 puts welcome
