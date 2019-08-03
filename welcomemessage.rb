@@ -11,4 +11,5 @@ print prompt
 name = gets.chomp
 puts "-----------------------------------------------------------------------"
 puts "Greetings stalker #{name.capitalize} and Welcome to #{dealership_name}.".colorize(:green)
+puts "-----------------------------------------------------------------------"
 end
