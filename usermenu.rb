@@ -7,7 +7,7 @@ def menu
   prompt = "> "
   print prompt
   answer = gets.chomp.downcase
-  selection = $inventory.select
+  selection = $inventory.select{|s| s == answer}
 if selection.size > 0
   puts "-----------------------------------------------------------------------"
   puts "These are the #{answer.capitalize}s we have available:".colorize(:green)
@@ -27,8 +27,7 @@ else
   print prompt
   sure = gets.chomp.downcase
   if sure == "yes"
-    print prompt
-    puts "-----------------------------------------------------------------------"
+    menu
   else
     puts "Thank you for shopping with us today!".colorize(:green)
   end
