@@ -1,51 +1,42 @@
 require_relative 'vehicle'
 
-cars9 = Vehicles.new("2008", "ford", "fiesta", "14,260", "brown")
-cars10 = Vehicles.new("2014", "ford", "fusion", "28,840", "dark green")
-car11 = Vehicles.new("2009", "ford", "mustang", "26,995", "light blue")
-cars12 = Vehicles.new("2013", "ford", "taurus", "27,700", "gold")
-
-$allcars = [["2009", "ford", "fiesta", "14,260", "yellow"],
-            ["2018","ford", "fusion", "22,840", "blue"],
-            ["2005", "ford", "mustang", "26,395", "red"],
-            ["2017", "ford", "taurus", "27,800", "white"],
-            ["2006", "ford", "fiesta", "15,260", "green"],
-            ["2016", "ford", "fusion", "22,940", "orange"],
-            ["2007", "ford", "mustang", "26,495", "black"],
-            ["2015", "ford", "taurus", "26,800", "silver"], ]
-
-=begin
-truck1 = Vehicles.new("2019", "ford", "ranger", "40,430", "truck", "black")
-truck2 = Vehicles.new("2016", "ford", "transit connect", "26,845", "truck", "white")
-truck3 = Vehicles.new("2017", "ford", "f150", "28,155", "truck", "silver")
-truck4 = Vehicles.new("2013", "ford", "super duty", "33,150", "truck", "dark grey")
-truck5 = Vehicles.new("2015", "ford", "transit", "35,840", "truck", "dark red")
-truck6 = Vehicles.new("2018", "ford", "ranger", "20,890", "truck", "silver")
-truck7 = Vehicles.new("2017", "ford", "transit connect", "26,845", "truck", "red")
-truck8 = Vehicles.new("2014", "ford", "f150", "28,155", "truck", "black")
-truck9 = Vehicles.new("2020", "ford", "super duty", "33,150", "truck", "dark green")
-truck10 = Vehicles.new("2016", "ford", "transit", "35,840", "truck", "dark blue")
-truck11 = Vehicles.new("2015", "ford", "ranger", "17,650", "truck", "orange")
-truck12 = Vehicles.new("2018", "ford", "transit connect", "26,845", "truck", "gold")
-$alltrucks = [truck1, truck2, truck3, truck4, truck5, truck6, truck7, truck8, truck9, truck10, truck11, truck12]
-
-suv1 = Vehicles.new("2019", "ford", "edge", "29,995", "suv", "gold")
-suv2 = Vehicles.new("2018", "ford", "escape", "24,215", "suv", "black")
-suv3 = Vehicles.new("2017", "ford", "explorer", "32,365", "suv", "white")
-suv4 = Vehicles.new("2016", "ford", "flex", "30,575", "suv", "silver")
-suv5 = Vehicles.new("2015", "ford", "expedition", "52,130", "suv", "blue")
-suv6 = Vehicles.new("2014", "ford", "edge", "29,995", "suv", "red")
-suv7 = Vehicles.new("2013", "ford", "escape", "24,215", "suv", "dark red")
-suv8 = Vehicles.new("2012", "ford", "explorer", "32,365", "suv", "dark green")
-suv9 = Vehicles.new("2020", "ford", "flex", "30,575", "suv", "dark blue")
-suv10 = Vehicles.new("2016", "ford", "expedition", "52,130", "suv", "orange")
-suv11 = Vehicles.new("2018", "ford", "edge", "29,995", "suv", "tan")
-suv12 = Vhicles.new("2014", "ford", "escape", "24,215", "suv", "grey")
-$allsuvs = [suv1, suv2, suv3, suv4, suv5, suv6, suv7, suv8, suv9, suv10, suv11, suv12]
-
-#all_cars.each do |car|
-#    puts car
-#end
-
-#puts cheap_Car
-=end
+#Holds the inventory of all the vehicles with additional fields for second item for dealer for future purposes.
+$inventory = [
+            ["2009", "ford", "fiesta", "14,260", "yellow", "cars"],
+            ["2018", "ford", "fusion", "22,840", "blue", "cars"],
+            ["2005", "ford", "mustang", "26,395", "red", "cars"],
+            ["2017", "ford", "taurus", "27,800", "white", "cars"],
+            ["2006", "ford", "fiesta", "15,260", "green", "cars"],
+            ["2016", "ford", "fusion", "22,940", "orange", "cars"],
+            ["2007", "ford", "mustang", "26,495", "black", "cars"],
+            ["2015", "ford", "taurus", "26,800", "silver", "cars"],
+            ["2008", "ford", "fiesta", "14,260", "brown", "cars"],
+            ["2014", "ford", "fusion", "28,840", "dark green", "cars"],
+            ["2009", "ford", "mustang", "26,995", "light blue", "cars"],
+            ["2013", "ford", "taurus", "27,700", "gold", "cars"],
+            ["2019", "ford", "ranger", "40,430", "black", "trucks"],
+            ["2016", "ford", "transit connect", "26,845", "white", "trucks"],
+            ["2017", "ford", "f150", "28,155", "silver", "trucks"],
+            ["2013", "ford", "super duty", "33,150", "dark grey", "trucks"],
+            ["2013", "ford", "super duty", "33,150", "dark grey", "trucks"],
+            ["2015", "ford", "transit", "35,840", "dark red", "trucks"],
+            ["2018", "ford", "ranger", "20,890", "silver", "trucks"],
+            ["2017", "ford", "transit connect", "26,845", "red", "trucks"],
+            ["2014", "ford", "f150", "28,155", "black", "trucks"],
+            ["2020", "ford", "super duty", "33,150", "dark green", "trucks"],
+            ["2016", "ford", "transit", "35,840", "dar blue", "trucks"],
+            ["2015", "ford", "ranger", "17,650", "orange", "trucks"],
+            ["2018", "ford", "transit connect", "26,845", "gold", "trucks"],
+            ["2019", "ford", "edge", "29,995", "gold", "suvs"],
+            ["2018", "ford", "escape", "24,215", "black", "suvs"],
+            ["2017", "ford", "explorer", "32,365", "white", "suvs"],
+            ["2016", "ford", "flex", "30,575", "silver", "suvs"],
+            ["2015", "ford", "expedition", "52,130", "blue", "suvs"],
+            ["2014", "ford", "edge", "29,995", "red", "suvs"],
+            ["2013", "ford", "escape", "24,215", "dark red", "suvs"],
+            ["2012", "ford", "explorer", "32,365", "dark green", "suvs"],
+            ["2020", "ford", "flex", "30,575", "dark blue", "suvs"],
+            ["2016", "ford", "expedition", "52,130", "orange", "suvs"],
+            ["2018", "ford", "edge", "29,995", "tan", "suvs"],
+            ["2014", "ford", "escape", "24,215", "grey", "suvs"],
+          ]
